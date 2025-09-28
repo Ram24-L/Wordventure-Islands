@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cowinri2u3ihd"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_rdmnp"]
+[ext_resource type="Texture2D" uid="uid://c7tg6ya8wnbe1" path="res://Assets/aset buah/orange.png" id="2_4r5rr"]
+
+[node name="Question Box" instance=ExtResource("1_rdmnp")]
+correct_answer_index = 2
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "gina drink ....... juice"
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_4r5rr")
+expand_mode = 4
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "apple"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "orange"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "pear"

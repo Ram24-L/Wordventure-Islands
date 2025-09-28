@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bisq2jwvdidgs"
+path="res://.godot/imported/coin-257878.mp3-1f55c7c7bbd0e72c10f51ce3c41cd436.mp3str"
+
+[deps]
+
+source_file="res://Assets/sound effext/coin-257878.mp3"
+dest_files=["res://.godot/imported/coin-257878.mp3-1f55c7c7bbd0e72c10f51ce3c41cd436.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8qeblepti8wp"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_di5wf"]
+[ext_resource type="Texture2D" uid="uid://bm81jo8q551uq" path="res://Assets/aset buah/strawberries.png" id="2_1d6eu"]
+
+[node name="Question Box" instance=ExtResource("1_di5wf")]
+correct_answer_index = 1
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "there are.....in a fridge"
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_1d6eu")
+expand_mode = 1
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "mangos"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "stawberries"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "bananas "

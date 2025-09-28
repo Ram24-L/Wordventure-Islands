@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cqfqk0dn4kem1"]
+
+[ext_resource type="FontFile" uid="uid://jd6bbbj4ltew" path="res://Assets/PIXY.ttf" id="1_hjhl8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6gmm"]
+bg_color = Color(0.0605303, 0.0605303, 0.0605303, 0.917647)
+
+[resource]
+Label/font_sizes/font_size = 36
+Label/fonts/font = ExtResource("1_hjhl8")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_c6gmm")

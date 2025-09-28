@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3dcwyqy23yhs"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_5626q"]
+[ext_resource type="Texture2D" uid="uid://bhx0vxgb7556d" path="res://Assets/Aset lagi/Aset lagi/49_20250928_084618_0026.png" id="2_jxu2j"]
+
+[node name="Question Box" instance=ExtResource("1_5626q")]
+correct_answer_index = 2
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "What animal is it ? "
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_jxu2j")
+expand_mode = 2
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "cat"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "bird"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "pig
+"

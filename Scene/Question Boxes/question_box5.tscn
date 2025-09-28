@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtvyjj55cfn2f"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_xfcpy"]
+[ext_resource type="Texture2D" uid="uid://ck773i12tbn6p" path="res://Assets/images/4.png" id="2_bpfm7"]
+
+[node name="Question Box" instance=ExtResource("1_xfcpy")]
+correct_answer_index = 2
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "What animal iS IT ?"
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_bpfm7")
+expand_mode = 2
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "GOAT"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "COW"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "DOG"

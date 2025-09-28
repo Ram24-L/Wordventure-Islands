@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://doroenuh7a5i5"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_f8mdf"]
+[ext_resource type="Texture2D" uid="uid://5jploexhh86f" path="res://Assets/Aset lagi/Aset lagi/40_20250928_084617_0017.png" id="2_c6or5"]
+
+[node name="Question Box" instance=ExtResource("1_f8mdf")]
+correct_answer_index = 2
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "rico does not like......"
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_c6or5")
+expand_mode = 2
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "coconut"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "orange"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "kiwi"

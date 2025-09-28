@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://mmsenkdhu75q"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_5mqbi"]
+[ext_resource type="Texture2D" uid="uid://bkl12ara4rk10" path="res://Assets/Aset lagi/Aset lagi/24_20250928_084617_0001.png" id="2_qg2w4"]
+
+[node name="Question Box" instance=ExtResource("1_5mqbi")]
+correct_answer_index = 2
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "What color is it ?"
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_qg2w4")
+expand_mode = 4
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "red"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "gray"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "purple"

@@ -1,0 +1,310 @@
+[gd_scene load_steps=28 format=3 uid="uid://bj6vtswyog0ev"]
+
+[ext_resource type="Theme" uid="uid://cqfqk0dn4kem1" path="res://Scene/ending.tres" id="1_f3apn"]
+[ext_resource type="Script" uid="uid://bfiyx2dvavtd1" path="res://Scene/winner_screeen.gd" id="2_8ej3n"]
+[ext_resource type="Texture2D" uid="uid://csmakae4aw382" path="res://Assets/The Male adventurer - Free/The Male adventurer - Free/Idle/idle_down.png" id="2_f3apn"]
+[ext_resource type="Script" uid="uid://1co207gu3q0k" path="res://Scene/texture_rect.gd" id="2_xm0g8"]
+[ext_resource type="Script" uid="uid://tajc6sfmbhjo" path="res://Scene/texture_rect2.gd" id="4_mvt7d"]
+[ext_resource type="Texture2D" uid="uid://butuyhxlcnvog" path="res://Assets/The Female Adventurer - Free/The Female Adventurer - Free/Idle/Idle_Down.png" id="5_54kao"]
+[ext_resource type="FontFile" uid="uid://jd6bbbj4ltew" path="res://Assets/PIXY.ttf" id="5_f24gi"]
+[ext_resource type="AudioStream" uid="uid://bisq2jwvdidgs" path="res://Assets/sound effext/coin-257878.mp3" id="7_n6fc2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ej3n"]
+atlas = ExtResource("2_f3apn")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xm0g8"]
+atlas = ExtResource("2_f3apn")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvt7d"]
+atlas = ExtResource("2_f3apn")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54kao"]
+atlas = ExtResource("2_f3apn")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6fc2"]
+atlas = ExtResource("2_f3apn")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f24gi"]
+atlas = ExtResource("2_f3apn")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhit0"]
+atlas = ExtResource("2_f3apn")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m506h"]
+atlas = ExtResource("2_f3apn")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f3apn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xm0g8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvt7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54kao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ej3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6fc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f24gi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhit0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m506h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default2",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhit0"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yo3q"]
+atlas = ExtResource("5_54kao")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7q20"]
+atlas = ExtResource("5_54kao")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4p0y"]
+atlas = ExtResource("5_54kao")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4ol1"]
+atlas = ExtResource("5_54kao")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdclw"]
+atlas = ExtResource("5_54kao")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xare4"]
+atlas = ExtResource("5_54kao")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g22f4"]
+atlas = ExtResource("5_54kao")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7it5"]
+atlas = ExtResource("5_54kao")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mygid"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7q20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4p0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w4ol1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yo3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdclw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xare4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g22f4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7it5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Winner Screeen" type="CenterContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(960, 540)
+layout_direction = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_f3apn")
+script = ExtResource("2_8ej3n")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(960, 540)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="header" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_f3apn")
+text = "Game ends...... calculating the score...."
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="sub_header" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 1"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = SubResource("AtlasTexture_8ej3n")
+stretch_mode = 5
+script = ExtResource("2_xm0g8")
+sprites = SubResource("SpriteFrames_f3apn")
+frameindex = 3
+auto_play = true
+playing = true
+
+[node name="true_answer" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Questions answered  :"
+horizontal_alignment = 1
+
+[node name="false_answer" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "True answers        :"
+horizontal_alignment = 1
+
+[node name="question_answered" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "wrong answers 	      :"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="winner_label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "WINNER👑"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 34
+
+[node name="main_menu" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_f24gi")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_mhit0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mhit0")
+text = "Main Menu"
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="sub_header" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Player 2"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = SubResource("AtlasTexture_2yo3q")
+stretch_mode = 5
+script = ExtResource("4_mvt7d")
+sprites = SubResource("SpriteFrames_mygid")
+frameindex = 3
+auto_play = true
+playing = true
+
+[node name="true_answe_2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Questions answered  :"
+horizontal_alignment = 1
+
+[node name="false_answer_2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "True answers        :"
+horizontal_alignment = 1
+
+[node name="question_answered_2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "wrong answers 	      :"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="winner_label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "WINNER👑"
+horizontal_alignment = 1
+
+[node name="coin" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(482, 129)
+stream = ExtResource("7_n6fc2")
+pitch_scale = 1.1
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer/main_menu" to="." method="_on_main_menu_pressed"]

@@ -1,0 +1,121 @@
+[gd_scene load_steps=8 format=3 uid="uid://t1bspd3hitre"]
+
+[ext_resource type="Script" uid="uid://vawx8w73ocfc" path="res://Scene/question.gd" id="1_ng8sq"]
+[ext_resource type="Texture2D" uid="uid://cs0l4yeu4duwr" path="res://Assets/box.png" id="2_8tpid"]
+[ext_resource type="FontFile" uid="uid://jd6bbbj4ltew" path="res://Assets/PIXY.ttf" id="3_vyvbg"]
+[ext_resource type="Texture2D" uid="uid://c1fftc87ud0cc" path="res://Assets/rabbit.png" id="4_dysb5"]
+[ext_resource type="Theme" uid="uid://vrx4mhb4f26r" path="res://Scene/wood-default.tres" id="5_83rim"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_egwgm"]
+
+[sub_resource type="Theme" id="Theme_a2k3r"]
+default_font = ExtResource("3_vyvbg")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 45
+Label/styles/normal = SubResource("StyleBoxEmpty_egwgm")
+
+[node name="Question Box" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_ng8sq")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -323.0
+offset_top = -182.0
+offset_right = 393.0
+offset_bottom = 193.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.913112, 0.913112)
+texture = ExtResource("2_8tpid")
+region_rect = Rect2(34, 78, 194, 145)
+patch_margin_left = 26
+patch_margin_top = 31
+patch_margin_right = 25
+patch_margin_bottom = 33
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -337.0
+offset_top = 35.0
+offset_right = 242.0
+offset_bottom = 300.0
+grow_horizontal = 2
+scale = Vector2(1.15849, 1.15849)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_a2k3r")
+text = "What animal it is ? "
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_direction = 4
+layout_mode = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("4_dysb5")
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Choice 1" type="Button" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(240, 45)
+layout_mode = 2
+theme = ExtResource("5_83rim")
+text = "RABBITS"
+
+[node name="Choice 2" type="Button" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme = ExtResource("5_83rim")
+text = "kITTEN"
+
+[node name="Choice 3" type="Button" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme = ExtResource("5_83rim")
+text = "CAT"
+
+[connection signal="pressed" from="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer/Choice 1" to="." method="_on_choice_1_pressed"]
+[connection signal="pressed" from="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer/Choice 2" to="." method="_on_choice_2_pressed"]
+[connection signal="pressed" from="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer/Choice 3" to="." method="_on_choice_3_pressed"]

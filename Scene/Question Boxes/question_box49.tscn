@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://c03orpps13rbc"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_xot4a"]
+[ext_resource type="Texture2D" uid="uid://dcl3kfvmewpsk" path="res://Assets/aset buah/watermelon.png" id="2_tyjm4"]
+
+[node name="Question Box" instance=ExtResource("1_xot4a")]
+correct_answer_index = 1
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "what fruit is it?"
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_tyjm4")
+expand_mode = 4
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "melon"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "watermelon"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "lychee"

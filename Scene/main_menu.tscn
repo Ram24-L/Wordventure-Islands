@@ -1,0 +1,147 @@
+[gd_scene load_steps=9 format=3 uid="uid://dm1ydj138pj6f"]
+
+[ext_resource type="Texture2D" uid="uid://ddrx6c2livyoi" path="res://Assets/pixel_art_large.png" id="1_87ipw"]
+[ext_resource type="Theme" uid="uid://vrx4mhb4f26r" path="res://Scene/wood-default.tres" id="1_ftydy"]
+[ext_resource type="Script" uid="uid://dhxb7flysuou8" path="res://Scene/main_menu.gd" id="1_kqsxi"]
+[ext_resource type="FontFile" uid="uid://bkg1dwsxr5krc" path="res://Assets/Pixel Game.otf" id="3_hii65"]
+[ext_resource type="PackedScene" uid="uid://sd1kf0vmtrdv" path="res://Scene/transition.tscn" id="5_pvidh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hii65"]
+texture = ExtResource("1_87ipw")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hii65"]
+bg_color = Color(0.315382, 0.183542, 0.0769591, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.258824, 0.176471, 0.176471, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqsxi"]
+bg_color = Color(0.497353, 0.302272, 0.145222, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.258824, 0.176471, 0.176471, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kqsxi")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hii65")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 50
+
+[node name="Label" type="Label" parent="MarginContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.258824, 0.176471, 0.176471, 1)
+theme_override_colors/font_outline_color = Color(0.635294, 0.396078, 0.207843, 1)
+theme_override_constants/line_spacing = -28
+theme_override_constants/shadow_offset_x = -100
+theme_override_constants/shadow_offset_y = -200
+theme_override_constants/outline_size = 14
+theme_override_constants/shadow_outline_size = 100
+theme_override_fonts/font = ExtResource("3_hii65")
+theme_override_font_sizes/font_size = 80
+text = "WORDVENTURE ISLAND"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 60
+
+[node name="button_vbox" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/MarginContainer/button_vbox"]
+custom_minimum_size = Vector2(180, 42)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_neighbor_top = NodePath("../Button3")
+theme = ExtResource("1_ftydy")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_hii65")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kqsxi")
+text = "START
+"
+
+[node name="Button2" type="Button" parent="MarginContainer/MarginContainer/button_vbox"]
+custom_minimum_size = Vector2(180, 42)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_ftydy")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_hii65")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kqsxi")
+text = "settings"
+
+[node name="Button4" type="Button" parent="MarginContainer/MarginContainer/button_vbox"]
+custom_minimum_size = Vector2(180, 42)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_ftydy")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_hii65")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kqsxi")
+text = "CREDITS"
+
+[node name="Button3" type="Button" parent="MarginContainer/MarginContainer/button_vbox"]
+custom_minimum_size = Vector2(180, 42)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_neighbor_bottom = NodePath("../Button")
+theme = ExtResource("1_ftydy")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_hii65")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kqsxi")
+text = "EXIT"
+
+[node name="Fade_Transition" parent="." instance=ExtResource("5_pvidh")]
+visible = false
+
+[node name="fade_timer" type="Timer" parent="Fade_Transition"]
+
+[connection signal="pressed" from="MarginContainer/MarginContainer/button_vbox/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/button_vbox/Button3" to="." method="_on_exit_pressed"]
+[connection signal="timeout" from="Fade_Transition/fade_timer" to="." method="_on_fade_timer_timeout"]

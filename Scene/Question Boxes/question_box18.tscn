@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://buui68ghq546v"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_vj2f7"]
+[ext_resource type="Texture2D" uid="uid://w5aewnqy4dq" path="res://Assets/Aset lagi/Aset lagi/44_20250928_084617_0021.png" id="2_axa6q"]
+
+[node name="Question Box" instance=ExtResource("1_vj2f7")]
+correct_answer_index = 1
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "What animal is it ? "
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_axa6q")
+expand_mode = 2
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "dog"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "zebra"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "horse"

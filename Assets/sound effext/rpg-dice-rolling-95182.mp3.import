@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxj65hn6bvvrb"
+path="res://.godot/imported/rpg-dice-rolling-95182.mp3-8d97e6b1c34cbdcbb46afe4ba4442848.mp3str"
+
+[deps]
+
+source_file="res://Assets/sound effext/rpg-dice-rolling-95182.mp3"
+dest_files=["res://.godot/imported/rpg-dice-rolling-95182.mp3-8d97e6b1c34cbdcbb46afe4ba4442848.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

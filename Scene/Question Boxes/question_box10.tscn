@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://djftja7fri7rv"]
+
+[ext_resource type="PackedScene" uid="uid://dqnmqvuq4xny3" path="res://Scene/Question Boxes/question_box8.tscn" id="1_7qqij"]
+
+[node name="Question Box" instance=ExtResource("1_7qqij")]
+correct_answer_index = 0
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "What colour iS IT ?"
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "red"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "blue"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "pink"

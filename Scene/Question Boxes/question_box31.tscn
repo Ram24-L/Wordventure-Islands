@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr5a108gikj7r"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_77qh5"]
+[ext_resource type="Texture2D" uid="uid://7lge2g8b7kd4" path="res://Assets/Aset lagi/Aset lagi/38_20250928_084617_0015.png" id="2_uvr77"]
+
+[node name="Question Box" instance=ExtResource("1_77qh5")]
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "color of the coffee ?"
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_uvr77")
+expand_mode = 4
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "red"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "green"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "brown"

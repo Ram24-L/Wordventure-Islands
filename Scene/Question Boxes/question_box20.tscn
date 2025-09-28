@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b82onl5w8sa5f"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_suin3"]
+[ext_resource type="Texture2D" uid="uid://bm2yc7oxmrb3a" path="res://Assets/Aset lagi/Aset lagi/31_20250928_084617_0008.png" id="2_aq5lh"]
+
+[node name="Question Box" instance=ExtResource("1_suin3")]
+correct_answer_index = 2
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "what color is sun ?"
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_aq5lh")
+expand_mode = 2
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "green"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "blue"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "yellow
+"

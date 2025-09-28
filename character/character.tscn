@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=3 uid="uid://dohycm5o7s83o"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yf0e5"]
+load_path = "res://.godot/imported/idle.png-f4d4ae5668b87a1c91dd66979f2564cc.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugqs2"]
+atlas = SubResource("CompressedTexture2D_yf0e5")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hx151"]
+atlas = SubResource("CompressedTexture2D_yf0e5")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rvpn"]
+atlas = SubResource("CompressedTexture2D_yf0e5")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6jyn"]
+atlas = SubResource("CompressedTexture2D_yf0e5")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgjim"]
+atlas = SubResource("CompressedTexture2D_yf0e5")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wy5t8"]
+atlas = SubResource("CompressedTexture2D_yf0e5")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dy06j"]
+atlas = SubResource("CompressedTexture2D_yf0e5")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkjfd"]
+atlas = SubResource("CompressedTexture2D_yf0e5")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gx66j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugqs2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hx151")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rvpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6jyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgjim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wy5t8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dy06j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkjfd")
+}],
+"loop": true,
+"name": &"Front",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Player 1" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_gx66j")
+animation = &"Front"
+frame_progress = 0.877034

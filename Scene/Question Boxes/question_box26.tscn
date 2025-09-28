@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://drltdj0j0g5o1"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_bbexo"]
+[ext_resource type="Texture2D" uid="uid://2rd68w48wyc8" path="res://Assets/Aset lagi/Aset lagi/23_20250928_084617_0000.png" id="2_2bi68"]
+
+[node name="Question Box" instance=ExtResource("1_bbexo")]
+correct_answer_index = 1
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "the color of matcha ?"
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_2bi68")
+expand_mode = 2
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "red"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "green"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "purple"

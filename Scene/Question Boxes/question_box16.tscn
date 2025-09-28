@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c66xo6fmb630e"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_2ixrn"]
+[ext_resource type="Texture2D" uid="uid://7j3yuxiy0uji" path="res://Assets/Aset lagi/Aset lagi/42_20250928_084617_0019.png" id="2_7ph8w"]
+
+[node name="Question Box" instance=ExtResource("1_2ixrn")]
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "cloud color is ? "
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_7ph8w")
+expand_mode = 2
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "white"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "blue"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "yellow"

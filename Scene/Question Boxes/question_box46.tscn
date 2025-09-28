@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://4hhar401gv3y"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_05kiy"]
+[ext_resource type="Texture2D" uid="uid://c3cd4jt8xx5fe" path="res://Assets/aset buah/rambutan.png" id="2_fwnw6"]
+
+[node name="Question Box" instance=ExtResource("1_05kiy")]
+correct_answer_index = 1
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "it has so many hair"
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_fwnw6")
+expand_mode = 4
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "papaya"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "rambutan"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "coconut"

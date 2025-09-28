@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://bimsfx7fk6tsf"]
+
+[ext_resource type="Texture2D" uid="uid://83gmwximdsrw" path="res://Assets/The Female Adventurer - Free/The Female Adventurer - Free/Idle/Idle2.png" id="1_llw7j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cib1c"]
+atlas = ExtResource("1_llw7j")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jt1u"]
+atlas = ExtResource("1_llw7j")
+region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45af7"]
+atlas = ExtResource("1_llw7j")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1krf"]
+atlas = ExtResource("1_llw7j")
+region = Rect2(144, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8mqd"]
+atlas = ExtResource("1_llw7j")
+region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpw1m"]
+atlas = ExtResource("1_llw7j")
+region = Rect2(240, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elmta"]
+atlas = ExtResource("1_llw7j")
+region = Rect2(288, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv2de"]
+atlas = ExtResource("1_llw7j")
+region = Rect2(336, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e6ppr"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cib1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jt1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45af7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1krf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8mqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpw1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elmta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hv2de")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 7.0
+}]
+
+[node name="Player 2" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_e6ppr")
+animation = &"new_animation"
+frame_progress = 0.361717

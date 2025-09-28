@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c47sicmhc22cy"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_3kgh8"]
+[ext_resource type="Texture2D" uid="uid://c5u6ed1rckiqh" path="res://Assets/Aset lagi/Aset lagi/47_20250928_084618_0024.png" id="2_2ch4b"]
+
+[node name="Question Box" instance=ExtResource("1_3kgh8")]
+correct_answer_index = 1
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "what color is blood ?"
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_2ch4b")
+expand_mode = 2
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "green
+"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "red"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "brown"

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm4jmae68q31x"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_ajspy"]
+[ext_resource type="Texture2D" uid="uid://bv1rk7wfkg0b" path="res://Assets/Aset lagi/Aset lagi/48_20250928_084618_0025.png" id="2_vx11a"]
+
+[node name="Question Box" instance=ExtResource("1_ajspy")]
+correct_answer_index = 1
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "what color is milk"
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+size_flags_vertical = 4
+texture = ExtResource("2_vx11a")
+expand_mode = 1
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "red"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "white"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "green
+"

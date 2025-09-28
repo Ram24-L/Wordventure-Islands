@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://rcncml6t7rpv"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_3yj5b"]
+[ext_resource type="Texture2D" uid="uid://dbsktmnqqfq23" path="res://Assets/Aset lagi/Aset lagi/26_20250928_084617_0003.png" id="2_45ufd"]
+
+[node name="Question Box" instance=ExtResource("1_3yj5b")]
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_45ufd")
+expand_mode = 4
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "whale"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "bird"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "snail"

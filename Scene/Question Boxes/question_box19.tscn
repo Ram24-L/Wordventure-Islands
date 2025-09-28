@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://7qhb03hofdm7"]
+
+[ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="1_kf5wa"]
+[ext_resource type="Texture2D" uid="uid://nip0l8cp3fwi" path="res://Assets/Aset lagi/Aset lagi/45_20250928_084617_0022.png" id="2_iimcm"]
+
+[node name="Question Box" instance=ExtResource("1_kf5wa")]
+
+[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
+text = "What animal is it ? "
+
+[node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
+texture = ExtResource("2_iimcm")
+expand_mode = 2
+
+[node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+text = "giraffe"
+
+[node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+text = "horse"
+
+[node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+text = "buffalo"

@@ -1,0 +1,86 @@
+[
+	{
+		"question": "What animal it is?",
+		"image_path": "res://assets/images/rabbit.png",
+		"choices": ["Rabbit", "Tiger", "Fox"],
+		"answer": "Rabbit"
+	},
+	{
+		"question": "What animal it is?",
+		"image_path": "res://assets/images/tiger.png",
+		"choices": ["Rabbit", "Tiger", "Fox"],
+		"answer": "Tiger"
+	},
+	{
+		"question": "What animal it is?",
+		"image_path": "res://assets/images/fish.png",
+		"choices": ["Fish", "Bird", "Snake"],
+		"answer": "Fish"
+	},
+	{
+		"question": "What animal it is?",
+		"image_path": "res://assets/images/bird.png",
+		"choices": ["Fish", "Bird", "Snake"],
+		"answer": "Bird"
+	},
+	{
+		"question": "What animal it is?",
+		"image_path": "res://assets/images/fox.png",
+		"choices": ["Fox", "Owl", "Dog"],
+		"answer": "Fox"
+	},
+	{
+		"question": "What animal it is?",
+		"image_path": "res://assets/images/owl.png",
+		"choices": ["Fox", "Owl", "Dog"],
+		"answer": "Owl"
+	},
+	{
+		"question": "What animal it is?",
+		"image_path": "res://assets/images/dog.png",
+		"choices": ["Dog", "Octopus", "Snake"],
+		"answer": "Dog"
+	},
+	{
+		"question": "What animal it is?",
+		"image_path": "res://assets/images/octopus.png",
+		"choices": ["Dog", "Octopus", "Snake"],
+		"answer": "Octopus"
+	},
+	{
+		"question": "What animal it is?",
+		"image_path": "res://assets/images/snake.png",
+		"choices": ["Dog", "Octopus", "Snake"],
+		"answer": "Snake"
+	},
+    {
+		"question": "Rina likes ...",
+		"image_path": "res://assets/images/mango.png",
+		"choices": ["Mango", "Grape", "Orange"],
+		"answer": "Mango"
+	},
+	{
+		"question": "There are ... in the refrigerator",
+		"image_path": "res://assets/images/strawberry.png",
+		"choices": ["Strawberry", "Banana", "Orange"],
+		"answer": "Strawberry"
+	},
+	{
+		"question": "... Taste sweet",
+		"image_path": "res://assets/images/banana.png",
+		"choices": ["Strawberry", "Banana", "Grape"],
+		"answer": "Banana"
+	},
+	{
+		"question": "Ida put ... in the bowl",
+		"image_path": "res://assets/images/grape.png",
+		"choices": ["Grape", "Orange", "Banana"],
+		"answer": "Grape"
+	},
+	{
+		"question": "Gina drink ... juice",
+		"image_path": "res://assets/images/orange.png",
+		"choices": ["Mango", "Grape", "Orange"],
+		"answer": "Orange"
+	}
+]
