@@ -6,7 +6,7 @@
 [node name="Question Box" instance=ExtResource("1_ewlwb")]
 
 [node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
-text = "what color is it ?"
+text = "the color of car ?"
 
 [node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
 texture = ExtResource("2_xbrsi")

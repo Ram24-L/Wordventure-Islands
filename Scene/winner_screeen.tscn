@@ -9,9 +9,9 @@
 [ext_resource type="FontFile" uid="uid://jd6bbbj4ltew" path="res://Assets/PIXY.ttf" id="5_f24gi"]
 [ext_resource type="AudioStream" uid="uid://bisq2jwvdidgs" path="res://Assets/sound effext/coin-257878.mp3" id="7_n6fc2"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8ej3n"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_f24gi"]
 atlas = ExtResource("2_f3apn")
-region = Rect2(144, 0, 48, 64)
+region = Rect2(240, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xm0g8"]
 atlas = ExtResource("2_f3apn")
@@ -25,13 +25,13 @@ region = Rect2(48, 0, 48, 64)
 atlas = ExtResource("2_f3apn")
 region = Rect2(96, 0, 48, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ej3n"]
+atlas = ExtResource("2_f3apn")
+region = Rect2(144, 0, 48, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_n6fc2"]
 atlas = ExtResource("2_f3apn")
 region = Rect2(192, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f24gi"]
-atlas = ExtResource("2_f3apn")
-region = Rect2(240, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhit0"]
 atlas = ExtResource("2_f3apn")
@@ -87,9 +87,9 @@ corner_radius_bottom_left = 4
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2yo3q"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xare4"]
 atlas = ExtResource("5_54kao")
-region = Rect2(144, 0, 48, 64)
+region = Rect2(240, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e7q20"]
 atlas = ExtResource("5_54kao")
@@ -103,13 +103,13 @@ region = Rect2(48, 0, 48, 64)
 atlas = ExtResource("5_54kao")
 region = Rect2(96, 0, 48, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yo3q"]
+atlas = ExtResource("5_54kao")
+region = Rect2(144, 0, 48, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_wdclw"]
 atlas = ExtResource("5_54kao")
 region = Rect2(192, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xare4"]
-atlas = ExtResource("5_54kao")
-region = Rect2(240, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g22f4"]
 atlas = ExtResource("5_54kao")
@@ -199,11 +199,11 @@ horizontal_alignment = 1
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-texture = SubResource("AtlasTexture_8ej3n")
+texture = SubResource("AtlasTexture_f24gi")
 stretch_mode = 5
 script = ExtResource("2_xm0g8")
 sprites = SubResource("SpriteFrames_f3apn")
-frameindex = 3
+frameindex = 5
 auto_play = true
 playing = true
 
@@ -266,11 +266,11 @@ horizontal_alignment = 1
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-texture = SubResource("AtlasTexture_2yo3q")
+texture = SubResource("AtlasTexture_xare4")
 stretch_mode = 5
 script = ExtResource("4_mvt7d")
 sprites = SubResource("SpriteFrames_mygid")
-frameindex = 3
+frameindex = 5
 auto_play = true
 playing = true
 

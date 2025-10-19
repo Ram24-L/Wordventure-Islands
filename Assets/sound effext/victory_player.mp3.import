@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5yguacctjk2m"
+path="res://.godot/imported/victory_player.mp3-c0b8378ff19487eb31f557df804f3b67.mp3str"
+
+[deps]
+
+source_file="res://Assets/sound effext/victory_player.mp3"
+dest_files=["res://.godot/imported/victory_player.mp3-c0b8378ff19487eb31f557df804f3b67.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

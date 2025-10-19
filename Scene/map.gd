@@ -291,7 +291,17 @@ func move(player: Node2D, player_place: int, roll: int) -> int: # DIUBAH: Mengem
 		
 		var tween = create_tween()
 		tween.tween_property(player, "position", target_position, step_time)
-		# ... (logika suara Anda tidak berubah) ...
+		# --- LOGIKA SUARA LANGKAH KAKI ---
+		if((current_place >= 6 and current_place <= 10) or (current_place >= 21 and current_place <=22)): # Cek jika tile adalah kayu
+			if( i % 2 == 0): # Mainkan suara kayu bergantian
+				wood.play()
+			else:
+				wood_2.play()
+		elif(i % 2 == 0 ): # Jika bukan kayu, mainkan suara tanah/rumput bergantian
+			dirt_1.play()
+		else:
+			dirt_2.play()
+		# --- AKHIR LOGIKA SUARA ---
 		await tween.finished
 		
 		var timer_delay = get_tree().create_timer(wait_time)

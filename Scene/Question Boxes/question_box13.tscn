@@ -6,7 +6,7 @@
 correct_answer_index = 0
 
 [node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
-text = "what colour iS IT ?"
+text = "what color iS IT ?"
 
 [node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
 text = "purple"

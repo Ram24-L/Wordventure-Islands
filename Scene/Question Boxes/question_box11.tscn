@@ -5,7 +5,7 @@
 [node name="Question Box" instance=ExtResource("1_dk0i3")]
 
 [node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
-text = "What colour iS IT ?"
+text = "What color iS IT ?"
 
 [node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
 text = "red"

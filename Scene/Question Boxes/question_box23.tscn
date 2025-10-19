@@ -6,9 +6,6 @@
 [node name="Question Box" instance=ExtResource("1_5626q")]
 correct_answer_index = 2
 
-[node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
-text = "What animal is it ? "
-
 [node name="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" index="0"]
 texture = ExtResource("2_jxu2j")
 expand_mode = 2
