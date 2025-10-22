@@ -60,10 +60,10 @@ func _ready() -> void:
 		label.modulate.a = 0.0
 	main_menu.modulate.a = 0.0
 	# Tentukan pemenang
-	if player1_score > player2_score:
+	if player1_accumulation['score'] > player2_accumulation['score']:
 		winner_label.show()
 		indexglob = 9
-	elif player2_score > player1_score:
+	elif player2_accumulation['score'] > player1_accumulation['score']:
 		winner_label_2.show()
 		indexglob = 10
 	else:
@@ -100,7 +100,14 @@ func animate_labels() -> void:
 	var initial_y_offset: float = 30.0 # Jarak tombol turun ke bawah
 	# Daftar label yang akan dianimasikan secara berurutan
 	var victory_sound_played = false # <-- TAMBAHKAN INI
-	var ordered_labels = [sub_header, sub_header2, question_answered, question_answered_2, true_answer, true_answer_2, score, score_2, winner_label, winner_label_2]
+	var ordered_labels = [sub_header, sub_header2, question_answered, question_answered_2, true_answer, true_answer_2, score, score_2]
+	if player1_accumulation['score'] > player2_accumulation['score']:
+		ordered_labels.append(winner_label)
+	elif player2_accumulation['score'] > player1_accumulation['score']:
+		ordered_labels.append(winner_label_2)
+	else:
+		ordered_labels.append(winner_label)
+		ordered_labels.append(winner_label_2)
 	var index = 0
 	for label in ordered_labels:
 		index+=1

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c7tg6ya8wnbe1" path="res://Assets/aset buah/orange.png" id="2_4r5rr"]
 
 [node name="Question Box" instance=ExtResource("1_rdmnp")]
-correct_answer_index = 2
+correct_answer_index = 1
 
 [node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
 text = "gina drink ....... juice"

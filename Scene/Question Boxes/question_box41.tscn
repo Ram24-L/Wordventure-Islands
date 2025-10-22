@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://vg5yn7rbq7m8" path="res://Assets/aset buah/banana.png" id="2_ya4jf"]
 
 [node name="Question Box" instance=ExtResource("1_omngc")]
+correct_answer_index = 2
 
 [node name="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" index="0"]
 text = "......... taste sweet"
