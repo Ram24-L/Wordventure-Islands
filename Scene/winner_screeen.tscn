@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bj6vtswyog0ev"]
+[gd_scene load_steps=29 format=3 uid="uid://bj6vtswyog0ev"]
 
 [ext_resource type="Theme" uid="uid://cqfqk0dn4kem1" path="res://Scene/ending.tres" id="1_f3apn"]
 [ext_resource type="Script" uid="uid://bfiyx2dvavtd1" path="res://Scene/winner_screeen.gd" id="2_8ej3n"]
@@ -8,18 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://butuyhxlcnvog" path="res://Assets/The Female Adventurer - Free/The Female Adventurer - Free/Idle/Idle_Down.png" id="5_54kao"]
 [ext_resource type="FontFile" uid="uid://jd6bbbj4ltew" path="res://Assets/PIXY.ttf" id="5_f24gi"]
 [ext_resource type="AudioStream" uid="uid://bisq2jwvdidgs" path="res://Assets/sound effext/coin-257878.mp3" id="7_n6fc2"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f24gi"]
-atlas = ExtResource("2_f3apn")
-region = Rect2(240, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xm0g8"]
-atlas = ExtResource("2_f3apn")
-region = Rect2(0, 0, 48, 64)
+[ext_resource type="AudioStream" uid="uid://c5yguacctjk2m" path="res://Assets/sound effext/victory_player.mp3" id="9_mhit0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mvt7d"]
 atlas = ExtResource("2_f3apn")
 region = Rect2(48, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xm0g8"]
+atlas = ExtResource("2_f3apn")
+region = Rect2(0, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_54kao"]
 atlas = ExtResource("2_f3apn")
@@ -32,6 +29,10 @@ region = Rect2(144, 0, 48, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_n6fc2"]
 atlas = ExtResource("2_f3apn")
 region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f24gi"]
+atlas = ExtResource("2_f3apn")
+region = Rect2(240, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhit0"]
 atlas = ExtResource("2_f3apn")
@@ -87,17 +88,13 @@ corner_radius_bottom_left = 4
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xare4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4p0y"]
 atlas = ExtResource("5_54kao")
-region = Rect2(240, 0, 48, 64)
+region = Rect2(48, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e7q20"]
 atlas = ExtResource("5_54kao")
 region = Rect2(0, 0, 48, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w4p0y"]
-atlas = ExtResource("5_54kao")
-region = Rect2(48, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w4ol1"]
 atlas = ExtResource("5_54kao")
@@ -110,6 +107,10 @@ region = Rect2(144, 0, 48, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_wdclw"]
 atlas = ExtResource("5_54kao")
 region = Rect2(192, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xare4"]
+atlas = ExtResource("5_54kao")
+region = Rect2(240, 0, 48, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g22f4"]
 atlas = ExtResource("5_54kao")
@@ -199,30 +200,29 @@ horizontal_alignment = 1
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-texture = SubResource("AtlasTexture_f24gi")
+texture = SubResource("AtlasTexture_mvt7d")
 stretch_mode = 5
 script = ExtResource("2_xm0g8")
 sprites = SubResource("SpriteFrames_f3apn")
-frameindex = 5
 auto_play = true
 playing = true
 
-[node name="true_answer" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="question_answered" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Questions answered  :"
 horizontal_alignment = 1
 
-[node name="false_answer" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="true_answer" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "True answers        :"
 horizontal_alignment = 1
 
-[node name="question_answered" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
+[node name="score" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "wrong answers 	      :"
+text = "SCORE 	    	           :"
 horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3"]
@@ -266,30 +266,29 @@ horizontal_alignment = 1
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-texture = SubResource("AtlasTexture_xare4")
+texture = SubResource("AtlasTexture_w4p0y")
 stretch_mode = 5
 script = ExtResource("4_mvt7d")
 sprites = SubResource("SpriteFrames_mygid")
-frameindex = 5
 auto_play = true
 playing = true
 
-[node name="true_answe_2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
+[node name="question_answered_2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Questions answered  :"
 horizontal_alignment = 1
 
-[node name="false_answer_2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
+[node name="true_answer_2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "True answers        :"
 horizontal_alignment = 1
 
-[node name="question_answered_2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
+[node name="score_2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "wrong answers 	      :"
+text = "SCORE 	    	           :"
 horizontal_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5"]
@@ -306,5 +305,9 @@ horizontal_alignment = 1
 position = Vector2(482, 129)
 stream = ExtResource("7_n6fc2")
 pitch_scale = 1.1
+
+[node name="VictoryPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_mhit0")
+volume_db = -9.923
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer/main_menu" to="." method="_on_main_menu_pressed"]

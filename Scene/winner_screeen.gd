@@ -7,28 +7,34 @@ var player2_score: int = 0
 @onready var sub_header: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/sub_header
 @onready var sub_header2: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5/sub_header
 @onready var true_answer: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/true_answer
-@onready var false_answer: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/false_answer
+@onready var victory_player: AudioStreamPlayer = $VictoryPlayer
+
+@onready var score: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/score
 @onready var question_answered: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/question_answered
-@onready var true_answer_2: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5/true_answe_2
-@onready var false_answer_2: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5/false_answer_2
+@onready var true_answer_2: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5/true_answer_2
+
 @onready var question_answered_2: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5/question_answered_2
+
+@onready var score_2: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5/score_2
+
 @onready var main_menu: Button = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/MarginContainer/main_menu
 
 @onready var winner_label: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer3/MarginContainer/winner_label
 @onready var winner_label_2: Label = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer5/MarginContainer/winner_label2
 @onready var coin: AudioStreamPlayer2D = $coin
+@onready var ost_citampi_story_soundtrack_town_theme: AudioStreamPlayer = $"OstCitampiStorySoundtrack-TownTheme"
 
 
 var player1_accumulation = {
 	"answered_questions": 0,
 	"true_answers": 0,
-	"wrong_answers": 0
+	"score": 0
 }
 
 var player2_accumulation = {
 	"answered_questions": 0,
 	"true_answers": 0,
-	"wrong_answers": 0
+	"score": 0
 }
 
 var player1_labels: Array[Label]
@@ -38,15 +44,15 @@ var roll_counter: int = 0 # Menghitung jumlah lemparan dadu
 var questions_to_spawn: int = 0 # Jumlah soal yang harus muncul di ronde spesial
 var questions_answered_this_turn: int = 0 # Melacak soal yang sudah dijawab
 func _ready() -> void:
-	player1_labels = [sub_header, true_answer, false_answer, question_answered, winner_label]
-	player2_labels = [sub_header2, true_answer_2, false_answer_2, question_answered_2, winner_label_2]
+	player1_labels = [sub_header, question_answered, true_answer, score, winner_label]
+	player2_labels = [sub_header2, question_answered_2, true_answer_2, score_2, winner_label_2]
 	
 	true_answer.text = "True answers : " + str(player1_accumulation["true_answers"])
-	false_answer.text = "wrong answers : " + str(player1_accumulation["wrong_answers"])
+	score.text = "score : " + str(player1_accumulation["score"])
 	question_answered.text = "Questions answered : " + str(player1_accumulation["answered_questions"])
 	
 	true_answer_2.text = "True answers : " + str(player2_accumulation["true_answers"])
-	false_answer_2.text = "wrong answers : " + str(player2_accumulation["wrong_answers"])
+	score_2.text = "score : " + str(player2_accumulation["score"])
 	question_answered_2.text = "Questions answered : " + str(player2_accumulation["answered_questions"])
 	
 	# Sembunyikan semua label, termasuk header
@@ -93,7 +99,8 @@ func animate_labels() -> void:
 	var initial_y: int = 1500
 	var initial_y_offset: float = 30.0 # Jarak tombol turun ke bawah
 	# Daftar label yang akan dianimasikan secara berurutan
-	var ordered_labels = [sub_header, sub_header2, true_answer, true_answer_2, false_answer, false_answer_2, question_answered, question_answered_2, winner_label, winner_label_2]
+	var victory_sound_played = false # <-- TAMBAHKAN INI
+	var ordered_labels = [sub_header, sub_header2, question_answered, question_answered_2, true_answer, true_answer_2, score, score_2, winner_label, winner_label_2]
 	var index = 0
 	for label in ordered_labels:
 		index+=1
@@ -109,11 +116,18 @@ func animate_labels() -> void:
 		
 		# Animasikan transparansi
 		tween_label.tween_property(label, "modulate", Color(1, 1, 1, 1), duration).set_ease(Tween.EASE_OUT)
-		if index > 2 and index!= indexglob:
-			coin.play()
+		
 		
 		# Tunggu tween selesai sebelum melanjutkan ke label berikutnya
 		await tween_label.finished
+		if index > 2 and index!= indexglob and index < 9:
+			await(2)
+			coin.play()
+		if (index == 9 or index == 10) and !victory_sound_played:
+			victory_player.play()
+			victory_sound_played =true
+			
+			
 	# Setelah semua label selesai, animasikan tombol main menu
 	print("Animating main menu button...")
 	var final_pos_button = main_menu.position

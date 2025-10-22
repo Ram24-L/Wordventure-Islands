@@ -27,12 +27,14 @@ extends Node2D
 @onready var score_ui: NinePatchRect = $Control/NinePatchRect2
 @onready var turn_ui: NinePatchRect = $Control/NinePatchRect3
 @onready var dice_bottom: NinePatchRect = $Control/NinePatchRect
+@onready var main_backsound: AudioStreamPlayer2D = $main_backsound
 
 @export var game_path : Array[Node]
-@export var question_boxes : Array[PackedScene]
-@export var special_tile_indices : Array[int] = [11, 25,3,17] # Contoh: Tile 11 dan 25 adalah spesial
-@export var special_tile_bonus: int = 20 # <-- TAMBAHKAN INI
-@export var special_tile_penalty: int = 10 # Poin yang akan dikurangi jika salah
+@export var hewan_questions: Array[PackedScene] = []
+@export var warna_questions: Array[PackedScene] = []
+@export var buah_questions: Array[PackedScene] = []
+
+var all_question_lists: Array = []
 var player1_is_finished: bool = false
 var player2_is_finished: bool = false
 var player1_place: int = 0
@@ -43,11 +45,11 @@ var player1_turn: bool = true
 var number_of_tiles : int
 var is_moving: bool = false
 var is_question_active: bool = false
-const OFFSET_X = 13
-const OFFSET_Y = 5
+const OFFSET_X = 10
+const OFFSET_Y = 0
 var question_acumulation : int # Variabel ini tidak digunakan, bisa dihapus
-var current_turn_is_special: bool = false # Flag untuk menandai giliran spesial
 # Variabel baru untuk sistem akumulasi poin soal
+
 var player1_step_points: int = 0
 var player2_step_points: int = 0
 var questions_to_spawn: int = 0 # Jumlah soal yang harus muncul di ronde spesial
@@ -55,19 +57,28 @@ var questions_answered_this_turn: int = 0 # Melacak soal yang sudah dijawab
 var player1_accumulation = {
 	"answered_questions": 0,
 	"true_answers": 0,
-	"wrong_answers": 0
+	"score": 0
 }
 
 var player2_accumulation = {
 	"answered_questions": 0,
 	"true_answers": 0,
-	"wrong_answers": 0
+	"score": 0
 }
 var score_end_pos: Vector2
 var dice_end_pos: Vector2
 var turn_ui_end_pos: Vector2
 var dice_bottom_end_pos: Vector2
 func _ready() -> void:
+	hewan_questions.shuffle()
+	warna_questions.shuffle()
+	buah_questions.shuffle()
+	if not hewan_questions.is_empty():
+		all_question_lists.append(hewan_questions)
+	if not warna_questions.is_empty():
+		all_question_lists.append(warna_questions)
+	if not buah_questions.is_empty():
+		all_question_lists.append(buah_questions)
 	# Sembunyikan transisi fade-in di awal agar tidak tumpang tindih
 	# Anda bisa memainkannya lagi setelah animasi intro selesai jika perlu
 	# 1. Simpan posisi akhir UI sebelum diubah
@@ -89,9 +100,9 @@ func _ready() -> void:
 	setup_camera_limits()
 	if not game_path.is_empty():
 		# Atur posisi awal Player seperti sebelumnya
-		var starting_position = game_path[0].position
-		player1.position = starting_position + Vector2(-18, -5)
-		player2.position = starting_position + Vector2(18, 5)
+		var starting_position = Vector2(265,79)
+		player1.position = starting_position + Vector2(-OFFSET_X, -OFFSET_Y)
+		player2.position = starting_position + Vector2(OFFSET_X, OFFSET_Y)
 
 		# Jalankan fungsi untuk setup dan memutar animasi intro
 		setup_and_play_intro_animation()
@@ -198,6 +209,7 @@ func animate_ui_in():
 	
 	# Dadu baru bisa diklik setelah semua animasi selesai
 	dice.can_click = true
+	main_backsound.play()
 	print("UI is ready, game can start!")
 	
 func update_ui():
@@ -210,9 +222,11 @@ func add_score(player_number: int, points: int):
 	if player_number == 1:
 		player1_score += points
 		player1_accumulation["true_answers"] += 1   # update jawaban benar
+		player1_accumulation["score"] = player1_score
 	else:
 		player2_score += points
 		player2_accumulation["true_answers"] += 1   # update jawaban benar
+		player2_accumulation["score"] = player2_score
 	update_ui()
 
 
@@ -234,13 +248,7 @@ func _on_dice_dice_has_rolled(roll: int) -> void:
 		if not player2_is_finished:
 			steps_moved = await move(player2, player2_place, roll)
 
-	# PRIORITAS 1: Tile Spesial (tidak berubah)
-	if current_turn_is_special:
-		print("--- Special Tile Event! ---")
-		questions_to_spawn = 1
-		questions_answered_this_turn = 0
-		spawn_question_box()
-		return
+
 
 	# PRIORITAS 2: Logika Akumulasi (DIUBAH menggunakan steps_moved)
 	if player1_turn:
@@ -285,9 +293,9 @@ func move(player: Node2D, player_place: int, roll: int) -> int: # DIUBAH: Mengem
 		var target_position = game_path[current_place].position
 		
 		if player == player1:
-			target_position.x -= OFFSET_X
+			target_position.x -= OFFSET_X*2
 		else:
-			target_position.x += OFFSET_X
+			target_position.x += OFFSET_X/2-3
 		
 		var tween = create_tween()
 		tween.tween_property(player, "position", target_position, step_time)
@@ -313,31 +321,65 @@ func move(player: Node2D, player_place: int, roll: int) -> int: # DIUBAH: Mengem
 		player2_place = current_place
 		
 	is_moving = false
-	if current_place in special_tile_indices:
-		current_turn_is_special = true
-		
+
 	return steps_taken # BARU: Kembalikan jumlah langkah yang diambil
 
 
 func spawn_question_box():
-	if question_boxes.is_empty():
+	# Cek apakah SEMUA list sudah habis
+	if all_question_lists.is_empty():
+		print("Semua soal dari semua kategori sudah habis!")
 		end_turn()
 		return
+
+	# --- LOGIKA BARU PER-PEMAIN ---
+	
+	# 1. Dapatkan jumlah soal yang sudah dijawab pemain SAAT INI
+	var player_question_count = 0
+	
+	# !! GANTI 'current_player_id' DENGAN VARIABEL GILIRAN ANDA !!
+	if player1_turn: 
+		player_question_count = player1_accumulation["answered_questions"]
+	else:
+		player_question_count = player2_accumulation["answered_questions"]
+
+	# 2. Hitung index kategori berdasarkan jumlah soal pemain itu
+	# Ini akan berputar (0, 1, 2, 0, 1, 2, ...)
+	var category_index = player_question_count % all_question_lists.size()
+
+	# 3. Dapatkan "dek" soal berdasarkan index itu
+	var current_list = all_question_lists[category_index]
+
+	# 4. Cek apakah "dek" YANG DITUJU itu habis
+	if current_list.is_empty():
+		# "Dek" ini (misal: Hewan) sudah habis. Hapus dari rotasi.
+		all_question_lists.remove_at(category_index)
+		
+		# Panggil ulang fungsi ini.
+		# Karena all_question_lists.size() berkurang, 
+		# 'category_index' akan dihitung ulang dan mengambil "dek" yang valid berikutnya.
+		spawn_question_box()
+		return
+	
+	# --- AKHIR LOGIKA BARU ---
+
+	# 5. Jika "dek" aman, ambil soal pertama (paling atas)
+	# pop_front() MENGAMBIL dan MENGHAPUS soal dari list
+	var question_box_scene = current_list.pop_front()
+	
+	# Kita tidak lagi butuh 'current_list_index'
+	
+	# --- Sisa kode Anda (sudah benar) ---
 	
 	is_question_active = true
-	var question_box_scene = question_boxes.pick_random()
 	var question_box = question_box_scene.instantiate()
 	question_show.play()
+	
 	# Hubungkan sinyal
 	if question_box.has_signal("answer_submitted"):
 		question_box.answer_submitted.connect(_on_question_box_answer_submitted)
 	
 	canvas_layer.add_child(question_box)
-	if question_box.has_signal("answer_submitted"):
-		question_box.answer_submitted.connect(_on_question_box_answer_submitted)
-	
-	canvas_layer.add_child(question_box)
-	
 
 func _on_question_box_answer_submitted(is_correct: bool):
 	# Tentukan pemain mana yang baru saja menjawab
@@ -352,32 +394,20 @@ func _on_question_box_answer_submitted(is_correct: bool):
 		player2_accumulation["answered_questions"] += 1
 	# ------------------------------------
 	
-	# Logika skor Anda di bawah ini sudah benar dan tidak perlu diubah
-	if current_turn_is_special:
-		if is_correct:
-			add_score(player_who_answered, special_tile_bonus)
-		else:
-			if player_who_answered == 1:
-				player1_score -= special_tile_penalty
-				player1_accumulation["wrong_answers"] += 1
-			else:
-				player2_score -= special_tile_penalty
-				player2_accumulation["wrong_answers"] += 1
-	else:
-		if is_correct:
-			add_score(player_who_answered, 10)
-		else:
-			if player_who_answered == 1:
-				player1_accumulation["wrong_answers"] += 1
-			else:
-				player2_accumulation["wrong_answers"] += 1
+	
+	if is_correct:
+		add_score(player_who_answered, 10)
 	
 	update_ui()
-	
-	# Logika untuk soal berurutan
 	questions_answered_this_turn += 1
 	if questions_answered_this_turn < questions_to_spawn:
-		spawn_question_box()
+		
+		# 1. Tambahkan jeda
+		await get_tree().create_timer(1.5).timeout
+		
+		# 2. Panggil fungsi spawn_question_box versi LAMA Anda
+		#    (tanpa parameter)
+		spawn_question_box() 
 	else:
 		end_turn()
 	
@@ -388,7 +418,7 @@ func end_turn():
 	print(player1_accumulation)
 	print(player2_accumulation)
 	is_question_active = false
-	current_turn_is_special = false
+
 	
 	# --- LOGIKA PENGGANTIAN GILIRAN YANG HILANG ---
 	if player1_turn:
@@ -422,11 +452,14 @@ func check_game_end():
 	if player1_is_finished and player2_is_finished:
 		print("Game ends! Final Scores - Player 1: ", player1_score, ", Player 2: ", player2_score)
 		dice.queue_free()
+		main_backsound.stop()
 		ending_sound.play()
 		await get_tree().create_timer(3.0).timeout
 		show_win_screen()
 		
 func show_win_screen():
+	player1_accumulation["score"] = player1_score
+	player2_accumulation["score"] = player2_score
 	var win_scene = preload("res://Scene/winner_screeen.tscn")
 	var win_screen = win_scene.instantiate()
 	# Kirim data skor

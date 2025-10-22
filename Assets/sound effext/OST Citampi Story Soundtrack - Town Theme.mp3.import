@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://tpg2hbrhyjxq"
+path="res://.godot/imported/OST Citampi Story Soundtrack - Town Theme.mp3-5cfb7e966fc3566dbdac75f2b95f2c72.mp3str"
+
+[deps]
+
+source_file="res://Assets/sound effext/OST Citampi Story Soundtrack - Town Theme.mp3"
+dest_files=["res://.godot/imported/OST Citampi Story Soundtrack - Town Theme.mp3-5cfb7e966fc3566dbdac75f2b95f2c72.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

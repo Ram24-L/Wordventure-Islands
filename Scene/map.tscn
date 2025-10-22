@@ -1,15 +1,14 @@
-[gd_scene load_steps=65 format=3 uid="uid://da22tff33u7eo"]
+[gd_scene load_steps=103 format=3 uid="uid://da22tff33u7eo"]
 
 [ext_resource type="Texture2D" uid="uid://cxekqlg63e8ds" path="res://Assets/tileset.png" id="1_ex5br"]
 [ext_resource type="Script" uid="uid://jt4deostj7gj" path="res://Scene/map.gd" id="1_s12we"]
 [ext_resource type="Texture2D" uid="uid://lpwungdn0m1b" path="res://Assets/PROPS.png" id="2_5mejs"]
+[ext_resource type="PackedScene" uid="uid://bgo6ytojnyfv2" path="res://Scene/Question Boxes/question_box1.tscn" id="2_hhq2m"]
 [ext_resource type="PackedScene" uid="uid://t1bspd3hitre" path="res://Scene/Question Boxes/question_box2.tscn" id="3_htkc4"]
 [ext_resource type="Texture2D" uid="uid://cffhvfjgnv0fs" path="res://Assets/ANIM_WATER-Sheet.png" id="3_s12we"]
 [ext_resource type="PackedScene" uid="uid://dcrbd6qhy5fgr" path="res://Scene/Question Boxes/question_box3.tscn" id="4_68lke"]
 [ext_resource type="PackedScene" uid="uid://bgcf45f2epa6t" path="res://Scene/Question Boxes/question_box4.tscn" id="4_pdsld"]
-[ext_resource type="Texture2D" uid="uid://dq00f6fixker1" path="res://Assets/The Male adventurer - Free/The Male adventurer - Free/Idle/idle.png" id="4_s12we"]
 [ext_resource type="Texture2D" uid="uid://cgyp7oa5783hm" path="res://Assets/number.png" id="5_31wal"]
-[ext_resource type="Texture2D" uid="uid://83gmwximdsrw" path="res://Assets/The Female Adventurer - Free/The Female Adventurer - Free/Idle/Idle2.png" id="5_54rcs"]
 [ext_resource type="PackedScene" uid="uid://dtvyjj55cfn2f" path="res://Scene/Question Boxes/question_box5.tscn" id="5_57akv"]
 [ext_resource type="Texture2D" uid="uid://d3paed1uvq4or" path="res://Assets/RedWood.png" id="5_ysgi6"]
 [ext_resource type="PackedScene" uid="uid://xoclhwu3mhu8" path="res://Scene/Question Boxes/question_box6.tscn" id="6_pgbpe"]
@@ -21,110 +20,149 @@
 [ext_resource type="Script" uid="uid://d254k7eogwa48" path="res://Scene/question_manager.gd" id="9_ysgi6"]
 [ext_resource type="PackedScene" uid="uid://cnmj8mssvriuo" path="res://Scene/Question Boxes/question_box11.tscn" id="10_3qnfj"]
 [ext_resource type="PackedScene" uid="uid://dlwvpm7s0dcht" path="res://Scene/Question Boxes/question_box12.tscn" id="11_h7tvk"]
+[ext_resource type="PackedScene" uid="uid://buui68ghq546v" path="res://Scene/Question Boxes/question_box18.tscn" id="11_pyfig"]
 [ext_resource type="PackedScene" uid="uid://bkfrh6euqqtar" path="res://Scene/Question Boxes/question_box13.tscn" id="12_d0ung"]
-[ext_resource type="PackedScene" uid="uid://bgo6ytojnyfv2" path="res://Scene/Question Boxes/question_box.tscn" id="13_1bqy8"]
+[ext_resource type="PackedScene" uid="uid://7qhb03hofdm7" path="res://Scene/Question Boxes/question_box19.tscn" id="12_qdnmu"]
+[ext_resource type="PackedScene" uid="uid://dtxofi8vb3y8f" path="res://Scene/Question Boxes/question_box21.tscn" id="13_bmqud"]
 [ext_resource type="PackedScene" uid="uid://by83v31fpiq6a" path="res://Scene/Question Boxes/question_box.tscn7.tscn" id="14_fah6r"]
+[ext_resource type="PackedScene" uid="uid://jcgahvqfldtj" path="res://Scene/Question Boxes/question_box22.tscn" id="14_o2iwf"]
+[ext_resource type="PackedScene" uid="uid://d3dcwyqy23yhs" path="res://Scene/Question Boxes/question_box23.tscn" id="15_tjl8n"]
+[ext_resource type="PackedScene" uid="uid://rcncml6t7rpv" path="res://Scene/Question Boxes/question_box37.tscn" id="16_8mvmu"]
+[ext_resource type="PackedScene" uid="uid://d1ojx5ahr507e" path="res://Scene/Question Boxes/question_box38.tscn" id="17_fpcgf"]
+[ext_resource type="PackedScene" uid="uid://qwrar1ocla57" path="res://Scene/Question Boxes/question_box14.tscn" id="22_n5ygj"]
+[ext_resource type="PackedScene" uid="uid://cm4jmae68q31x" path="res://Scene/Question Boxes/question_box15.tscn" id="23_jwj7q"]
+[ext_resource type="PackedScene" uid="uid://c66xo6fmb630e" path="res://Scene/Question Boxes/question_box16.tscn" id="24_gukw3"]
+[ext_resource type="PackedScene" uid="uid://d2gdqw7176vh5" path="res://Scene/Question Boxes/question_box17.tscn" id="25_n3t8r"]
 [ext_resource type="AudioStream" uid="uid://dj0hepfe81qa" path="res://Assets/sound effext/level-up-191997.mp3" id="26_57akv"]
+[ext_resource type="PackedScene" uid="uid://b82onl5w8sa5f" path="res://Scene/Question Boxes/question_box20.tscn" id="26_iyl02"]
 [ext_resource type="Texture2D" uid="uid://nj1ufru34nqh" path="res://Assets/tatakan.png" id="26_pdsld"]
+[ext_resource type="PackedScene" uid="uid://c47sicmhc22cy" path="res://Scene/Question Boxes/question_box24.tscn" id="27_4a8xq"]
 [ext_resource type="Theme" uid="uid://vrx4mhb4f26r" path="res://Scene/wood-default.tres" id="27_pdsld"]
 [ext_resource type="AudioStream" uid="uid://c8gmrelhxbjhp" path="res://Assets/sound effext/8-bit-video-game-win-level-sound-version-1-145827.mp3" id="28_57akv"]
+[ext_resource type="PackedScene" uid="uid://c6pt183vmoyd2" path="res://Scene/Question Boxes/question_box25.tscn" id="28_i6p87"]
 [ext_resource type="AudioStream" uid="uid://cwdr1124m5l11" path="res://Assets/sound effext/dirt1.mp3" id="29_8n8ta"]
+[ext_resource type="PackedScene" uid="uid://drltdj0j0g5o1" path="res://Scene/Question Boxes/question_box26.tscn" id="29_fu1vx"]
+[ext_resource type="PackedScene" uid="uid://b30ce3g4bjo8i" path="res://Scene/Question Boxes/question_box27.tscn" id="30_jj0lw"]
 [ext_resource type="AudioStream" uid="uid://balmnj0061f13" path="res://Assets/sound effext/wood1.mp3" id="30_vu0oa"]
 [ext_resource type="AudioStream" uid="uid://dk6fxf14kexx7" path="res://Assets/sound effext/wood2.mp3" id="31_3qnfj"]
+[ext_resource type="PackedScene" uid="uid://cbn7q5xxls8l1" path="res://Scene/Question Boxes/question_box28.tscn" id="31_l78mf"]
 [ext_resource type="AudioStream" uid="uid://c0u1qujmhc8w2" path="res://Assets/sound effext/dirt2.mp3" id="31_vu0oa"]
+[ext_resource type="PackedScene" uid="uid://ctf25lw1pxldr" path="res://Scene/Question Boxes/question_box29.tscn" id="32_scwko"]
 [ext_resource type="PackedScene" uid="uid://sd1kf0vmtrdv" path="res://Scene/transition.tscn" id="33_3qnfj"]
+[ext_resource type="PackedScene" uid="uid://odxjdh25alg0" path="res://Scene/Question Boxes/question_box30.tscn" id="33_30tsv"]
 [ext_resource type="Texture2D" uid="uid://dhi7svfhqte8l" path="res://Assets/images/Waving Flag Red-Sheet.png" id="33_h7tvk"]
+[ext_resource type="PackedScene" uid="uid://cr5a108gikj7r" path="res://Scene/Question Boxes/question_box31.tscn" id="34_woajm"]
+[ext_resource type="AudioStream" uid="uid://tpg2hbrhyjxq" path="res://Assets/sound effext/OST Citampi Story Soundtrack - Town Theme.mp3" id="35_d0ung"]
+[ext_resource type="PackedScene" uid="uid://cddy14hgvhnqn" path="res://Scene/Question Boxes/question_box32.tscn" id="35_v58vo"]
+[ext_resource type="PackedScene" uid="uid://mmsenkdhu75q" path="res://Scene/Question Boxes/question_box33.tscn" id="36_q07o3"]
+[ext_resource type="PackedScene" uid="uid://dlaiprdxdspan" path="res://Scene/Question Boxes/question_box34.tscn" id="37_bqq6g"]
+[ext_resource type="PackedScene" uid="uid://cmd6s5gyioa76" path="res://Scene/Question Boxes/question_box35.tscn" id="38_143b2"]
+[ext_resource type="PackedScene" uid="uid://dbpk4k227kfbp" path="res://Scene/Question Boxes/question_box36.tscn" id="39_j7lfj"]
+[ext_resource type="PackedScene" uid="uid://b763ip07i33uq" path="res://Scene/Question Boxes/question_box39.tscn" id="40_w7hix"]
+[ext_resource type="PackedScene" uid="uid://c8qeblepti8wp" path="res://Scene/Question Boxes/question_box40.tscn" id="41_hhtxx"]
+[ext_resource type="PackedScene" uid="uid://c2ok6v4igklbd" path="res://Scene/Question Boxes/question_box41.tscn" id="42_m7msu"]
+[ext_resource type="PackedScene" uid="uid://cwkdslwd6p0wx" path="res://Scene/Question Boxes/question_box42.tscn" id="43_45u30"]
+[ext_resource type="PackedScene" uid="uid://cowinri2u3ihd" path="res://Scene/Question Boxes/question_box43.tscn" id="44_ebwr3"]
+[ext_resource type="PackedScene" uid="uid://odivk2vwo2yl" path="res://Scene/Question Boxes/question_box44.tscn" id="45_8pxdg"]
+[ext_resource type="PackedScene" uid="uid://cu5vkmiweavth" path="res://Scene/Question Boxes/question_box45.tscn" id="46_tm2gx"]
+[ext_resource type="PackedScene" uid="uid://4hhar401gv3y" path="res://Scene/Question Boxes/question_box46.tscn" id="47_y8tr6"]
+[ext_resource type="PackedScene" uid="uid://doroenuh7a5i5" path="res://Scene/Question Boxes/question_box47.tscn" id="48_qseet"]
+[ext_resource type="PackedScene" uid="uid://cnl1gf6l23j1b" path="res://Scene/Question Boxes/question_box48.tscn" id="49_xgojj"]
+[ext_resource type="PackedScene" uid="uid://c03orpps13rbc" path="res://Scene/Question Boxes/question_box49.tscn" id="50_08w24"]
+[ext_resource type="PackedScene" uid="uid://dhkjemtjgkw2t" path="res://Scene/Question Boxes/question_box50.tscn" id="51_m52bj"]
+[ext_resource type="Texture2D" uid="uid://qfc4x5uc45w6" path="res://Assets/player/p1(2).png" id="52_hhq2m"]
+[ext_resource type="Texture2D" uid="uid://cowb1c0t8pv3k" path="res://Assets/player/p2(2).png" id="53_pyfig"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_31wal"]
-atlas = ExtResource("4_s12we")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdnmu"]
+atlas = ExtResource("52_hhq2m")
 region = Rect2(0, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qftbs"]
-atlas = ExtResource("4_s12we")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmqud"]
+atlas = ExtResource("52_hhq2m")
 region = Rect2(48, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5vj6g"]
-atlas = ExtResource("4_s12we")
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2iwf"]
+atlas = ExtResource("52_hhq2m")
 region = Rect2(96, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ysgi6"]
-atlas = ExtResource("4_s12we")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjl8n"]
+atlas = ExtResource("52_hhq2m")
 region = Rect2(144, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wo3cx"]
-atlas = ExtResource("4_s12we")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mvmu"]
+atlas = ExtResource("52_hhq2m")
 region = Rect2(192, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e7yu7"]
-atlas = ExtResource("4_s12we")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpcgf"]
+atlas = ExtResource("52_hhq2m")
 region = Rect2(240, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1i5py"]
-atlas = ExtResource("4_s12we")
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5ygj"]
+atlas = ExtResource("52_hhq2m")
 region = Rect2(288, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_htkc4"]
-atlas = ExtResource("4_s12we")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwj7q"]
+atlas = ExtResource("52_hhq2m")
 region = Rect2(336, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_klihr"]
-atlas = ExtResource("5_54rcs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gukw3"]
+atlas = ExtResource("53_pyfig")
 region = Rect2(0, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r6yyu"]
-atlas = ExtResource("5_54rcs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3t8r"]
+atlas = ExtResource("53_pyfig")
 region = Rect2(48, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ymvkr"]
-atlas = ExtResource("5_54rcs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyl02"]
+atlas = ExtResource("53_pyfig")
 region = Rect2(96, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nwk8l"]
-atlas = ExtResource("5_54rcs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a8xq"]
+atlas = ExtResource("53_pyfig")
 region = Rect2(144, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0nsck"]
-atlas = ExtResource("5_54rcs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6p87"]
+atlas = ExtResource("53_pyfig")
 region = Rect2(192, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lb4kn"]
-atlas = ExtResource("5_54rcs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fu1vx"]
+atlas = ExtResource("53_pyfig")
 region = Rect2(240, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c5dv5"]
-atlas = ExtResource("5_54rcs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jj0lw"]
+atlas = ExtResource("53_pyfig")
 region = Rect2(288, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d5m0r"]
-atlas = ExtResource("5_54rcs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_l78mf"]
+atlas = ExtResource("53_pyfig")
 region = Rect2(336, 0, 48, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u5hqo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_31wal")
+"texture": SubResource("AtlasTexture_qdnmu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qftbs")
+"texture": SubResource("AtlasTexture_bmqud")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5vj6g")
+"texture": SubResource("AtlasTexture_o2iwf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ysgi6")
+"texture": SubResource("AtlasTexture_tjl8n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wo3cx")
+"texture": SubResource("AtlasTexture_8mvmu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e7yu7")
+"texture": SubResource("AtlasTexture_fpcgf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1i5py")
+"texture": SubResource("AtlasTexture_n5ygj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_htkc4")
+"texture": SubResource("AtlasTexture_jwj7q")
 }],
 "loop": true,
 "name": &"idle_front_p1",
@@ -132,28 +170,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_klihr")
+"texture": SubResource("AtlasTexture_gukw3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r6yyu")
+"texture": SubResource("AtlasTexture_n3t8r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ymvkr")
+"texture": SubResource("AtlasTexture_iyl02")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nwk8l")
+"texture": SubResource("AtlasTexture_4a8xq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0nsck")
+"texture": SubResource("AtlasTexture_i6p87")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lb4kn")
+"texture": SubResource("AtlasTexture_fu1vx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c5dv5")
+"texture": SubResource("AtlasTexture_jj0lw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d5m0r")
+"texture": SubResource("AtlasTexture_l78mf")
 }],
 "loop": true,
 "name": &"idle_front_p2",
@@ -1085,7 +1123,7 @@ texture = ExtResource("33_h7tvk")
 0:0/animation_frame_1/duration = 0.3
 0:0/animation_frame_2/duration = 0.3
 0:0/animation_frame_3/duration = 0.3
-0:0/animation_frame_4/duration = 0.3
+0:0/animation_frame_4/duration = 0.1
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_5vj6g"]
@@ -1100,18 +1138,19 @@ sources/8 = SubResource("TileSetAtlasSource_d0ung")
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("game_path")]
 script = ExtResource("1_s12we")
 game_path = [NodePath("levelcontainer/Path/0"), NodePath("levelcontainer/Path/1"), NodePath("levelcontainer/Path/2"), NodePath("levelcontainer/Path/3"), NodePath("levelcontainer/Path/4"), NodePath("levelcontainer/Path/5"), NodePath("levelcontainer/Path/6"), NodePath("levelcontainer/Path/7"), NodePath("levelcontainer/Path/8"), NodePath("levelcontainer/Path/9"), NodePath("levelcontainer/Path/10"), NodePath("levelcontainer/Path/11"), NodePath("levelcontainer/Path/12"), NodePath("levelcontainer/Path/13"), NodePath("levelcontainer/Path/14"), NodePath("levelcontainer/Path/15"), NodePath("levelcontainer/Path/16"), NodePath("levelcontainer/Path/17"), NodePath("levelcontainer/Path/18"), NodePath("levelcontainer/Path/19"), NodePath("levelcontainer/Path/20"), NodePath("levelcontainer/Path/21"), NodePath("levelcontainer/Path/22"), NodePath("levelcontainer/Path/23"), NodePath("levelcontainer/Path/24"), NodePath("levelcontainer/Path/25"), NodePath("levelcontainer/Path/26"), NodePath("levelcontainer/Path/27"), NodePath("levelcontainer/Path/28"), NodePath("levelcontainer/Path/29"), NodePath("levelcontainer/Path/30"), NodePath("levelcontainer/Path/31")]
-question_boxes = Array[PackedScene]([ExtResource("3_htkc4"), ExtResource("4_68lke"), ExtResource("4_pdsld"), ExtResource("5_57akv"), ExtResource("6_pgbpe"), ExtResource("7_aptuv"), ExtResource("8_8n8ta"), ExtResource("5_57akv"), ExtResource("8_8n8ta"), ExtResource("9_vu0oa"), ExtResource("10_3qnfj"), ExtResource("11_h7tvk"), ExtResource("12_d0ung"), ExtResource("13_1bqy8"), ExtResource("14_fah6r")])
+hewan_questions = Array[PackedScene]([ExtResource("2_hhq2m"), ExtResource("3_htkc4"), ExtResource("4_68lke"), ExtResource("4_pdsld"), ExtResource("5_57akv"), ExtResource("6_pgbpe"), ExtResource("7_aptuv"), ExtResource("8_8n8ta"), ExtResource("14_fah6r"), ExtResource("11_pyfig"), ExtResource("12_qdnmu"), ExtResource("13_bmqud"), ExtResource("14_o2iwf"), ExtResource("15_tjl8n"), ExtResource("16_8mvmu"), ExtResource("17_fpcgf")])
+warna_questions = Array[PackedScene]([ExtResource("9_vu0oa"), ExtResource("10_3qnfj"), ExtResource("11_h7tvk"), ExtResource("12_d0ung"), ExtResource("22_n5ygj"), ExtResource("23_jwj7q"), ExtResource("24_gukw3"), ExtResource("25_n3t8r"), ExtResource("26_iyl02"), ExtResource("27_4a8xq"), ExtResource("28_i6p87"), ExtResource("29_fu1vx"), ExtResource("30_jj0lw"), ExtResource("31_l78mf"), ExtResource("32_scwko"), ExtResource("33_30tsv"), ExtResource("34_woajm"), ExtResource("35_v58vo"), ExtResource("36_q07o3"), ExtResource("37_bqq6g"), ExtResource("38_143b2"), ExtResource("39_j7lfj")])
+buah_questions = Array[PackedScene]([ExtResource("40_w7hix"), ExtResource("41_hhtxx"), ExtResource("42_m7msu"), ExtResource("43_45u30"), ExtResource("44_ebwr3"), ExtResource("45_8pxdg"), ExtResource("46_tm2gx"), ExtResource("47_y8tr6"), ExtResource("48_qseet"), ExtResource("49_xgojj"), ExtResource("50_08w24"), ExtResource("51_m52bj")])
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Player1" type="AnimatedSprite2D" parent="."]
 z_index = 6
-position = Vector2(260, 70)
+position = Vector2(255, 79)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_u5hqo")
-animation = &"idle_front_p1"
+animation = &"idle_front_p2"
 autoplay = "idle_front_p1"
-frame_progress = 0.532557
 
 [node name="dice" parent="." instance=ExtResource("8_qftbs")]
 z_index = 6
@@ -1119,13 +1158,12 @@ position = Vector2(-411, 196)
 scale = Vector2(1.27454, 1.27454)
 
 [node name="Player2" type="AnimatedSprite2D" parent="."]
-z_index = 3
-position = Vector2(295, 69)
+z_index = 6
+position = Vector2(275, 79)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_u5hqo")
-animation = &"idle_front_p2"
+animation = &"idle_front_p1"
 autoplay = "idle_front_p2"
-frame_progress = 0.244981
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1.5
@@ -1400,6 +1438,7 @@ layer_4/z_index = 4
 layer_4/tile_data = PackedInt32Array(-589803, 1638407, 19, -524267, 1638407, 20, -589802, 1703943, 19, -524266, 1703943, 20, -589807, 1376263, 19, -524271, 1376263, 20, -589806, 1441799, 19, -524270, 1441799, 20, -393199, 1114119, 19, -327663, 1114119, 20, -393198, 1179655, 19, -327662, 1179655, 20, -393203, 851975, 19, -327667, 851975, 20, -393202, 917511, 19, -327666, 917511, 20, -393207, 589831, 19, -327671, 589831, 20, -393206, 655367, 19, -327670, 655367, 20, -589815, 1638407, 15, -524279, 1638407, 16, -589814, 1703943, 15, -524278, 1703943, 16, -589819, 1376263, 15, -524283, 1376263, 16, -589818, 1441799, 15, -524282, 1441799, 16, -589823, 1114119, 15, -524287, 1114119, 16, -589822, 1179655, 15, -524286, 1179655, 16, -524291, 851975, 15, -458755, 851975, 16, -524290, 917511, 15, -458754, 917511, 16, -524295, 589831, 15, -458759, 589831, 16, -524294, 655367, 15, -458758, 655367, 16, -524299, 1638407, 19, -458763, 1638407, 20, -524298, 1703943, 19, -458762, 1703943, 20, -524303, 1376263, 19, -458767, 1376263, 20, -524302, 1441799, 19, -458766, 1441799, 20, -524307, 1114119, 19, -458771, 1114119, 20, -524306, 1179655, 19, -458770, 1179655, 20, -327699, 851975, 19, -262163, 851975, 20, -327698, 917511, 19, -262162, 917511, 20, -131091, 589831, 19, -65555, 589831, 20, -131090, 655367, 19, -65554, 655367, 20, 65517, 1638407, 15, 131053, 1638407, 16, 65518, 1703943, 15, 131054, 1703943, 16, 262125, 1376263, 15, 327661, 1376263, 16, 262126, 1441799, 15, 327662, 1441799, 16, 458733, 1114119, 15, 524269, 1114119, 16, 458734, 1179655, 15, 524270, 1179655, 16, 655341, 851975, 15, 720877, 851975, 16, 655342, 917511, 15, 720878, 917511, 16, 655345, 589831, 15, 720881, 589831, 16, 655346, 655367, 15, 720882, 655367, 16, 655349, 1638407, 19, 720885, 1638407, 20, 655350, 1703943, 19, 720886, 1703943, 20, -655336, 8, 0)
 
 [node name="Path" type="Node2D" parent="levelcontainer"]
+position = Vector2(-12, 4)
 script = ExtResource("7_e7yu7")
 
 [node name="0" type="Marker2D" parent="levelcontainer/Path"]
@@ -1497,5 +1536,14 @@ position = Vector2(358, -167)
 
 [node name="31" type="Marker2D" parent="levelcontainer/Path"]
 position = Vector2(414, -165)
+
+[node name="OstCitampiStorySoundtrack-TownTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("35_d0ung")
+
+[node name="main_backsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("35_d0ung")
+volume_db = -10.0
+playback_type = 1
+parameters/looping = true
 
 [connection signal="dice_has_rolled" from="dice" to="." method="_on_dice_dice_has_rolled"]
