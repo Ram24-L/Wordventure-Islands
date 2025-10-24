@@ -29,7 +29,9 @@ func animate_in():
 	# Opsional: tambahkan efek pantulan
 	tween.set_trans(Tween.TRANS_BOUNCE)
 	tween.set_ease(Tween.EASE_OUT)
-
+	await tween.finished 
+	choice_1.grab_focus() 
+	
 func _on_choice_1_pressed():
 	handle_choice(0)
 

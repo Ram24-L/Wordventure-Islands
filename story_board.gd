@@ -1,7 +1,8 @@
 extends Control
 
-@onready var label: Label = $Label
+@onready var label: Label = $ColorRect/Label
 @onready var fade_overlay: ColorRect = $FadeOverlay
+@onready var label_2: Label = $ColorRect/Label2
 
 var story_lines = [
 	"On an island full of wonder...",
@@ -14,9 +15,28 @@ var story_lines = [
 var is_skipping: bool = false
 
 func _ready():
+	start_flashing()
 	play_story_sequence()
+func start_flashing():
+	var tween = create_tween()
+	tween.set_loops()
+	tween.tween_property(label_2, "modulate:a", 0.0, 1.5)
+	tween.tween_property(label_2, "modulate:a", 1.0, 1.5)
+func _unhandled_input(event: InputEvent) -> void:
+	if (Input.is_action_just_pressed("skip")):
+			# 7. Jika sudah proses skip, jangan lakukan apa-
+		print("tombol terklik")
+		if is_skipping:
+			return
+		print("tombol terklik")
+		# 8. Set flag agar sekuens utama berhenti
+		is_skipping = true
+		
 
-# Tambahkan "async" karena kita akan "await"
+		# 10. Baru pindah scene setelah transisi selesai
+		get_tree().change_scene_to_file("res://Scene/map.tscn")
+  
+
 func play_story_sequence() -> void:
 	var fade_duration = 0.5
 	var display_duration = 2.5
@@ -50,30 +70,8 @@ func play_story_sequence() -> void:
 		await get_tree().create_timer(display_duration).timeout
 		if is_skipping: return # Cek lagi
 
-	# 4. Transisi FADE OUT (Hanya jika tidak di-skip)
-	# Pastikan Anda "await" transisi Anda.
-	# Saya berasumsi Transition.fade_in() adalah fungsi async
 	await Transition.fade_in()
 	
 	# 5. Cek sekali lagi sebelum pindah scene
 	if is_skipping: return
 	get_tree().change_scene_to_file("res://Scene/map.tscn")
-
-
-# 6. Jadikan fungsi ini "async" agar bisa "await"
-func _on_button_pressed() -> void:
-	# 7. Jika sudah proses skip, jangan lakukan apa-
-	print("tombol terklik")
-	if is_skipping:
-		return
-	print("tombol terklik")
-	# 8. Set flag agar sekuens utama berhenti
-	is_skipping = true
-	
-	# 9. Jalankan transisi DAN TUNGGU (await) sampai selesai
-	Transition.fade_in()
-	await Transition.fade_in()
-
-	# 10. Baru pindah scene setelah transisi selesai
-	get_tree().change_scene_to_file("res://Scene/map.tscn")
-  

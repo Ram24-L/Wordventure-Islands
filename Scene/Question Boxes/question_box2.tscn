@@ -104,18 +104,24 @@ alignment = 1
 [node name="Choice 1" type="Button" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(240, 45)
 layout_mode = 2
+focus_neighbor_top = NodePath("../Choice 3")
+focus_neighbor_bottom = NodePath("../Choice 2")
 theme = ExtResource("5_83rim")
 text = "RABBITS"
 
 [node name="Choice 2" type="Button" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(240, 45)
 layout_mode = 2
+focus_neighbor_top = NodePath("../Choice 1")
+focus_neighbor_bottom = NodePath("../Choice 3")
 theme = ExtResource("5_83rim")
 text = "kITTEN"
 
 [node name="Choice 3" type="Button" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(240, 45)
 layout_mode = 2
+focus_neighbor_top = NodePath("../Choice 2")
+focus_neighbor_bottom = NodePath("../Choice 1")
 theme = ExtResource("5_83rim")
 text = "CAT"
 

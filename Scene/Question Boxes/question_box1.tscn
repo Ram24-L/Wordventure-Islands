@@ -20,3 +20,9 @@ text = "BUFFALO"
 
 [node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
 text = "RABBIT"
+
+[node name="Right" parent="." index="1"]
+volume_db = 5.0
+
+[node name="False" parent="." index="2"]
+volume_db = 5.0

@@ -8,10 +8,16 @@
 text = "What color iS IT ?"
 
 [node name="Choice 1" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="0"]
+focus_neighbor_top = NodePath("")
+focus_neighbor_bottom = NodePath("")
 text = "red"
 
 [node name="Choice 2" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+focus_neighbor_top = NodePath("")
+focus_neighbor_bottom = NodePath("")
 text = "green"
 
 [node name="Choice 3" parent="NinePatchRect/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer" index="2"]
+focus_neighbor_top = NodePath("")
+focus_neighbor_bottom = NodePath("")
 text = "blue"

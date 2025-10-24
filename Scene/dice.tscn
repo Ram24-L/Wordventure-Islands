@@ -161,6 +161,7 @@ one_shot = true
 
 [node name="diceroll" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_ewhmm")
+volume_db = 5.0
 pitch_scale = 0.67
 panning_strength = 2.0
 
